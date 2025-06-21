@@ -1,3 +1,4 @@
+import { config } from "./config";
 import { env } from "./env";
 
 export default function Home() {
@@ -17,6 +18,14 @@ export default function Home() {
       </p>
       <p>
         API_KEY: {env.API_KEY}
+      </p>
+
+      <h1>via config</h1>
+      <p>
+        API_NAME: {config.api.name}
+      </p>
+      <p>
+        API_KEY: {config.api.key}
       </p>
     </div>
   );
