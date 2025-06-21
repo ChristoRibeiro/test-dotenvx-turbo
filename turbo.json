@@ -3,20 +3,32 @@
   "ui": "tui",
   "globalEnv": ["API_NAME", "API_KEY", "DOTENV_PRIVATE_KEY_PRODUCTION", "DOTENV_PRIVATE_KEY_DEVELOPMENT"],
   "tasks": {
+    "dev": {
+      "inputs": ["$TURBO_DEFAULT$", ".env.development"],
+      "cache": false,
+      "persistent": true
+    },
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "inputs": ["$TURBO_DEFAULT$", ".env.production"],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        "next-env.d.ts",
+        ".expo/**",
+        ".react-email/**",
+        "!.react-email/.next/cache/**",
+        "dist/**"
+      ]
     },
+    "start": {
+      "cache": false
+    },    
     "lint": {
       "dependsOn": ["^lint"]
     },
     "check-types": {
       "dependsOn": ["^check-types"]
-    },
-    "dev": {
-      "cache": false,
-      "persistent": true
-    }
+    } 
   }
 }
