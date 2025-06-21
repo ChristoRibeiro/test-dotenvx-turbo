@@ -1,7 +1,7 @@
 {
   "$schema": "https://turborepo.com/schema.json",
   "ui": "tui",
-  "globalEnv": ["API_NAME", "API_KEY"],
+  "globalEnv": ["API_NAME", "API_KEY", "DOTENV_PRIVATE_KEY_PRODUCTION", "DOTENV_PRIVATE_KEY_DEVELOPMENT"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
