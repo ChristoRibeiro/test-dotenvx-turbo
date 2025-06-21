@@ -4,9 +4,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "dotenvx run --strict -f .env.development --env-keys-file .env.keys --overload --debug -- next dev --turbopack --port 3000",
-    "build": "dotenvx run --strict -f .env.production --env-keys-file .env.keys --overload --debug -- next build",
-    "start": "dotenvx run --strict -f .env.production --env-keys-file .env.keys --overload --debug -- next start",
+    "dev": "dotenvx run --strict -f .env.development --env-keys-file ../../.env.keys --overload --debug -- next dev --turbopack --port 3000",
+    "build": "dotenvx run --strict -f .env.production --env-keys-file ../../.env.keys --overload --debug -- next build",
+    "start": "dotenvx run --strict -f .env.production --env-keys-file ../../.env.keys --overload --debug -- next start",
     "lint": "next lint --max-warnings 0",
     "check-types": "tsc --noEmit"
   },
