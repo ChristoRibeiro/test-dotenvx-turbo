@@ -3,10 +3,13 @@
   "ui": "tui",
   "globalEnv": ["API_NAME", "API_KEY", "DOTENV_PRIVATE_KEY_PRODUCTION", "DOTENV_PRIVATE_KEY_DEVELOPMENT"],
   "tasks": {
+       "topo": {
+      "dependsOn": ["^topo"]
+    },
     "dev": {
       "inputs": ["$TURBO_DEFAULT$", ".env.development"],
-      "cache": false,
-      "persistent": true
+      "persistent": true,
+      "cache": false
     },
     "build": {
       "dependsOn": ["^build"],
@@ -23,12 +26,18 @@
     },
     "start": {
       "cache": false
-    },    
-    "lint": {
-      "dependsOn": ["^lint"]
     },
-    "check-types": {
-      "dependsOn": ["^check-types"]
-    } 
+    "test": {
+      "cache": false
+    },
+    "clean": {
+      "cache": false
+    },
+    "lint": {
+      "dependsOn": ["^topo"]
+    },
+    "typecheck": {
+      "dependsOn": ["^topo"]
+    }
   }
 }
