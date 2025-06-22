@@ -3,7 +3,7 @@
   "ui": "tui",
   "globalEnv": ["API_NAME", "API_KEY", "DOTENV_PRIVATE_KEY_PRODUCTION", "DOTENV_PRIVATE_KEY_DEVELOPMENT"],
   "tasks": {
-       "topo": {
+    "topo": {
       "dependsOn": ["^topo"]
     },
     "dev": {
