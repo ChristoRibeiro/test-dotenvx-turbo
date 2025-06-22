@@ -1,7 +1,21 @@
 {
-  "$schema": "https://turborepo.com/schema.json",
+  "$schema": "https://turborepo.org/schema.json",
+  "globalEnv": [
+    "TURBO_TELEMETRY_DISABLED",
+    "NEXT_TELEMETRY_DISABLED",
+    "DOTENV_PRIVATE_KEY",
+    "DOTENV_PUBLIC_KEY_DEVELOPMENT",
+    "DOTENV_PRIVATE_KEY_PRODUCTION",
+    "DOTENV_PUBLIC_KEY_PRODUCTION",
+    "DOTENV_PRIVATE_KEY_PRODUCTION",
+    "OPENAI_API_KEY",
+    "OPENPANEL_CLIENT_ID",
+    "OPENPANEL_SECRET_KEY",
+    "BETTER_AUTH_SECRET",
+    "DATABASE_URL",
+    "RESEND_API_KEY"
+  ],
   "ui": "tui",
-  "globalEnv": ["API_NAME", "API_KEY", "DOTENV_PRIVATE_KEY_PRODUCTION", "DOTENV_PRIVATE_KEY_DEVELOPMENT"],
   "tasks": {
     "topo": {
       "dependsOn": ["^topo"]

@@ -8,11 +8,7 @@ export const env = createEnv({
   // Client & Server
   // ================================
 
-  shared: {
-    // Node
-    PORT: z.coerce.number().default(3000),
-    NODE_ENV: z.enum(["development", "test", "production"]),
-  },
+  shared: {},
 
   // ================================
   // Client
@@ -25,8 +21,7 @@ export const env = createEnv({
   // ================================
 
   server: {
-    API_NAME: z.string(),
-    API_KEY: z.string(),
+    OPENAI_API_KEY: z.string(),
   },
 
   // ================================
@@ -34,15 +29,7 @@ export const env = createEnv({
   // ================================
 
   runtimeEnv: {
-    API_NAME: process.env.API_NAME,
-    API_KEY: process.env.API_KEY,
-
-    // Not in dotenv file
-    // ================================
-
-    // Node
-    PORT: process.env.PORT,
-    NODE_ENV: process.env.NODE_ENV,
+    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
   },
 
   // ================================
